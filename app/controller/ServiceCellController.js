@@ -9,6 +9,7 @@ function ServiceCell(req,resp) {
     
     resp.status(200).send(response);
 }
+
 module.exports = {
     ServiceCell
 }

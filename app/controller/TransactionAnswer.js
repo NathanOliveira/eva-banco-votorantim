@@ -18,7 +18,23 @@ function getPhones(req, resp) {
 
     resp.status(200).send(response);
 }
+function replace(req,resp){
+    var answerText = req.body.answer.content.content;
+    for(var parameter in req.query){
+        answerText = answerText.replace(`__${parameter}__`,req.query[parameter]);
+    }
+    var answer = req.body.answer;
+    answer.content.content = answerText; 
+    var response = {
+        openContext: req.body.openContext,
+        visibleContext: req.body.visibleContext,
+        hiddenContext: req.body.hiddenContext,
+        answer
+    }
+    resp.status(200).send(response);
+}
 
 module.exports = {
-    getPhones
+    getPhones,
+    replace
 };
