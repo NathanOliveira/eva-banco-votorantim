@@ -12,5 +12,6 @@ app.use(bodyParser.urlencoded({extended:true}));
 //rotas 
 require('../app/routes/Index')(app);
 require('../app/routes/ServiceCell')(app);
+require('../app/routes/TransactionAnswer')(app);
 
 module.exports = app;
