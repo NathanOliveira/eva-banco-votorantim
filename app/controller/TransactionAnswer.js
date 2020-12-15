@@ -1,3 +1,21 @@
+function getProducts(req, resp) {
+
+    console.log('body', req.body)
+
+    let answer = req.body.answer;
+
+    let buttons = [
+        {name: "Conta Corrente", value: "Conta Corrente"},
+        {name: "Poupança", value: "Poupança"},
+        {name: "Carteira de investimentos", value: "Carteira de investimentos"}
+    ]
+
+    answer.content.buttons = buttons;
+
+    resp.status(200).send(response);
+    
+}
+
 function getPhones(req, resp) {
 
     var answer = req.body.answer;
@@ -35,6 +53,7 @@ function replace(req,resp){
 }
 
 module.exports = {
+    getProducts,
     getPhones,
     replace
 };
