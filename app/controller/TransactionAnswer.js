@@ -12,6 +12,14 @@ function getProducts(req, resp) {
 
     answer.content.buttons = buttons;
 
+    var response = {
+        openContext: req.body.openContext,
+        visibleContext: req.body.visibleContext,
+        hiddenContext: req.body.hiddenContext,
+        answer
+    }
+
+
     resp.status(200).send(response);
     
 }
