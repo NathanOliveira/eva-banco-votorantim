@@ -1,5 +1,4 @@
 const defaultRoutes = async (app, options) => {
-
     app.get('/', async (request, response) => {
         return response.status(200).send({
             success: true,
@@ -8,5 +7,4 @@ const defaultRoutes = async (app, options) => {
         });
     });
 };
-
 module.exports = defaultRoutes;
