@@ -2,15 +2,16 @@
   "name": "eva-transaction-manager",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app",
+    "start:debug": "nodemon --inspect=0.0.0.0 app"
   },
-  "author": "",
+  "author": "Nathan Oliveira",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "consign": "^0.1.6",
-    "express": "^4.17.1"
+    "dotenv": "^16.0.1",
+    "fastify": "^3.11.0"
   }
 }

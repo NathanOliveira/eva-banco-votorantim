@@ -1,7 +1,12 @@
-module.exports = function (app) {
+const defaultRoutes = async (app, options) => {
 
-    app.get('/',function(req,resp){
-        resp.status(200).send('OK');
-    })
+    app.get('/', async (request, response) => {
+        return response.status(200).send({
+            success: true,
+            statusCode: 200,
+            message: 'Bem vindo a semana do conhecimento BV 2022'
+        });
+    });
+};
 
-}
+module.exports = defaultRoutes;
